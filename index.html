@@ -1,1 +1,391 @@
-<p>Hello world</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AquaPure — Delivering Purity to Your Doorstep</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Bebas Neue for headlines, DM Sans for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ===================== WATER BUBBLE BACKGROUND ===================== -->
+  <div class="water-bg" aria-hidden="true">
+    <div class="bubble" style="--s:80px;--l:10%;--d:0s;--op:0.15"></div>
+    <div class="bubble" style="--s:50px;--l:25%;--d:2s;--op:0.1"></div>
+    <div class="bubble" style="--s:120px;--l:40%;--d:4s;--op:0.08"></div>
+    <div class="bubble" style="--s:60px;--l:55%;--d:1s;--op:0.12"></div>
+    <div class="bubble" style="--s:90px;--l:70%;--d:3s;--op:0.1"></div>
+    <div class="bubble" style="--s:40px;--l:80%;--d:5s;--op:0.18"></div>
+    <div class="bubble" style="--s:100px;--l:90%;--d:2.5s;--op:0.07"></div>
+    <div class="ripple ripple-1"></div>
+    <div class="ripple ripple-2"></div>
+    <div class="ripple ripple-3"></div>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon"><i class="fa-solid fa-droplet"></i></span>
+      <span class="brand-name">Aqua<span class="brand-accent">Pure</span></span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="login.html" class="nav-btn btn-outline">Login</a></li>
+      <li><a href="signup.html" class="nav-btn btn-glow">Get Started</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="home">
+    <div class="hero-content" data-animate="fadeUp">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Trusted by 50,000+ Families
+      </div>
+      <h1 class="hero-title">
+        Pure Water,<br/>
+        <span class="gradient-text">Pure Life.</span>
+      </h1>
+      <p class="hero-sub">
+        Premium mineral water delivered fresh to your doorstep — every single day,
+        rain or shine. Because your family deserves nothing but the best.
+      </p>
+      <div class="hero-cta">
+        <a href="signup.html" class="btn btn-glow btn-lg">
+          <i class="fa-solid fa-bolt"></i> Start Delivery
+        </a>
+        <a href="#services" class="btn btn-ghost btn-lg">
+          <i class="fa-solid fa-play"></i> Learn More
+        </a>
+      </div>
+      <!-- Quick stats row -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">99.9<span>%</span></span>
+          <span class="stat-label">Purity Rate</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">50K<span>+</span></span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">24<span>/7</span></span>
+          <span class="stat-label">Delivery Service</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero image: water delivery boy from Unsplash -->
+    <div class="hero-image" data-animate="fadeRight">
+      <div class="hero-img-glow"></div>
+      <img
+        src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=700&q=80&fit=crop"
+        alt="Water delivery service"
+        class="hero-img"
+        onerror="this.src='https://images.unsplash.com/photo-1568644396922-5c3bfae12521?w=700&q=80&fit=crop'"
+      />
+      <!-- Floating card overlay -->
+      <div class="float-card float-card-1">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>100% Purified</span>
+      </div>
+      <div class="float-card float-card-2">
+        <i class="fa-solid fa-clock"></i>
+        <span>On-Time Delivery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE QUOTES STRIP ===================== -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span><i class="fa-solid fa-droplet"></i> Pure Water, Pure Life.</span>
+      <span><i class="fa-solid fa-droplet"></i> Every Drop Matters.</span>
+      <span><i class="fa-solid fa-droplet"></i> Delivering Purity to Your Doorstep.</span>
+      <span><i class="fa-solid fa-droplet"></i> Clean Water, Healthy Future.</span>
+      <span><i class="fa-solid fa-droplet"></i> Stay Hydrated, Stay Alive.</span>
+      <span><i class="fa-solid fa-droplet"></i> Nature's Best, Bottled for You.</span>
+      <!-- Duplicate for seamless loop -->
+      <span><i class="fa-solid fa-droplet"></i> Pure Water, Pure Life.</span>
+      <span><i class="fa-solid fa-droplet"></i> Every Drop Matters.</span>
+      <span><i class="fa-solid fa-droplet"></i> Delivering Purity to Your Doorstep.</span>
+      <span><i class="fa-solid fa-droplet"></i> Clean Water, Healthy Future.</span>
+      <span><i class="fa-solid fa-droplet"></i> Stay Hydrated, Stay Alive.</span>
+      <span><i class="fa-solid fa-droplet"></i> Nature's Best, Bottled for You.</span>
+    </div>
+  </div>
+
+  <!-- ===================== SERVICES SECTION ===================== -->
+  <section class="section" id="services">
+    <div class="section-header" data-animate="fadeUp">
+      <span class="section-tag">What We Offer</span>
+      <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+      <p class="section-sub">From daily jugs to bulk supply — we've got your hydration covered.</p>
+    </div>
+
+    <div class="cards-grid" data-animate="fadeUp">
+      <!-- Service Card 1 -->
+      <div class="service-card" tabindex="0">
+        <div class="card-icon"><i class="fa-solid fa-house-chimney-water"></i></div>
+        <h3>Home Delivery</h3>
+        <p>Fresh, purified 20L water cans delivered directly to your home on a flexible schedule you choose.</p>
+        <a href="signup.html" class="card-link">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <!-- Service Card 2 -->
+      <div class="service-card" tabindex="0">
+        <div class="card-icon"><i class="fa-solid fa-building"></i></div>
+        <h3>Office Supply</h3>
+        <p>Keep your entire workforce hydrated with bulk water delivery — daily, weekly, or monthly plans.</p>
+        <a href="signup.html" class="card-link">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <!-- Service Card 3 -->
+      <div class="service-card" tabindex="0">
+        <div class="card-icon"><i class="fa-solid fa-bottle-water"></i></div>
+        <h3>Bottled Water</h3>
+        <p>Premium mineral water bottles in various sizes — perfect for events, travel, and retail stocking.</p>
+        <a href="signup.html" class="card-link">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <!-- Service Card 4 -->
+      <div class="service-card" tabindex="0">
+        <div class="card-icon"><i class="fa-solid fa-rotate"></i></div>
+        <h3>Auto-Refill</h3>
+        <p>Set it and forget it. Our smart subscription auto-refills your water supply before you run dry.</p>
+        <a href="signup.html" class="card-link">Subscribe <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT / HOW IT WORKS ===================== -->
+  <section class="section section-dark" id="about">
+    <div class="section-header" data-animate="fadeUp">
+      <span class="section-tag">Simple Process</span>
+      <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+    </div>
+    <div class="steps-row" data-animate="fadeUp">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon"><i class="fa-solid fa-user-plus"></i></div>
+        <h4>Create Account</h4>
+        <p>Sign up in under 60 seconds. No paperwork, no hassle.</p>
+      </div>
+      <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <h4>Choose Schedule</h4>
+        <p>Pick delivery days, frequency, and quantity that suits you.</p>
+      </div>
+      <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <h4>We Deliver</h4>
+        <p>Our team delivers fresh water right to your doorstep on time.</p>
+      </div>
+      <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-icon"><i class="fa-solid fa-face-smile"></i></div>
+        <h4>Stay Refreshed</h4>
+        <p>Enjoy pure, safe water whenever you need it. Repeat.</p>
+      </div>
+    </div>
+
+    <!-- About image row -->
+    <div class="about-row" data-animate="fadeUp">
+      <div class="about-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=600&q=80&fit=crop"
+          alt="Water purification plant"
+          class="about-img"
+          onerror="this.src='https://images.unsplash.com/photo-1624958723474-089a63e22afa?w=600&q=80&fit=crop'"
+        />
+        <div class="about-img-badge">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <strong>ISO Certified</strong>
+            <span>Quality Assured</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-tag">Our Story</span>
+        <h2>Hydrating India,<br/><span class="gradient-text">One Drop at a Time.</span></h2>
+        <p>Founded in 2018, AquaPure started with a single delivery van and a big dream: to make safe, clean water accessible to every household. Today, we operate across 20+ cities with a fleet of 500+ delivery partners.</p>
+        <p>Our multi-stage purification process — RO + UV + Mineral Enrichment — ensures every drop you drink is safe, fresh, and delicious.</p>
+        <div class="about-features">
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i> RO + UV Purified</div>
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i> Mineral Enriched</div>
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i> BIS & ISO Certified</div>
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i> Tamper-Proof Sealing</div>
+        </div>
+        <a href="signup.html" class="btn btn-glow">Start Your Journey</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section" id="testimonials">
+    <div class="section-header" data-animate="fadeUp">
+      <span class="section-tag">Happy Customers</span>
+      <h2 class="section-title">What They <span class="gradient-text">Say</span></h2>
+    </div>
+    <div class="testimonials-grid" data-animate="fadeUp">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"AquaPure has changed our lives. The water tastes incredibly clean and fresh. Delivery is always on time — even on Sundays!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <strong>Rohit Sharma</strong>
+            <span>Delhi, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card testi-featured">
+        <div class="testi-stars">★★★★★</div>
+        <p>"We switched our entire office to AquaPure. 100 employees, zero complaints. The auto-refill feature is a game changer for us."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div>
+            <strong>Priya Mehta</strong>
+            <span>Operations Manager, Mumbai</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Super affordable, super pure. I love that their cans are eco-friendly. The app makes scheduling deliveries so easy!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <strong>Anjali Verma</strong>
+            <span>Bangalore, India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section class="section section-dark" id="contact">
+    <div class="section-header" data-animate="fadeUp">
+      <span class="section-tag">Reach Us</span>
+      <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+    </div>
+    <div class="contact-grid" data-animate="fadeUp">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <strong>Phone / WhatsApp</strong>
+            <span>+91 98765 43210</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <strong>Email Us</strong>
+            <span>support@aquapure.in</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Head Office</strong>
+            <span>42, Water Street, Connaught Place, New Delhi — 110001</span>
+          </div>
+        </div>
+        <div class="contact-social">
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <!-- Quick Contact Form -->
+      <form class="contact-form glass-card" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="cName">Your Name</label>
+          <input type="text" id="cName" placeholder="Rahul Kumar" />
+          <span class="form-error" id="cNameErr"></span>
+        </div>
+        <div class="form-group">
+          <label for="cEmail">Email Address</label>
+          <input type="email" id="cEmail" placeholder="rahul@email.com" />
+          <span class="form-error" id="cEmailErr"></span>
+        </div>
+        <div class="form-group">
+          <label for="cMsg">Message</label>
+          <textarea id="cMsg" rows="4" placeholder="How can we help you?"></textarea>
+          <span class="form-error" id="cMsgErr"></span>
+        </div>
+        <button type="submit" class="btn btn-glow btn-full">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-icon"><i class="fa-solid fa-droplet"></i></span>
+        <span class="brand-name">Aqua<span class="brand-accent">Pure</span></span>
+        <p>Delivering purity and freshness to your doorstep since 2018.</p>
+      </div>
+      <div class="footer-links-col">
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links-col">
+        <h5>Account</h5>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="#">My Orders</a>
+        <a href="#">Subscriptions</a>
+      </div>
+      <div class="footer-links-col">
+        <h5>Legal</h5>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 AquaPure. All rights reserved. Made with <i class="fa-solid fa-heart" style="color:#38bdf8"></i> in India.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — AquaPure</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="auth-body">
+
+  <!-- Water Background Bubbles -->
+  <div class="water-bg" aria-hidden="true">
+    <div class="bubble" style="--s:80px;--l:5%;--d:0s;--op:0.15"></div>
+    <div class="bubble" style="--s:50px;--l:20%;--d:2s;--op:0.1"></div>
+    <div class="bubble" style="--s:120px;--l:50%;--d:4s;--op:0.08"></div>
+    <div class="bubble" style="--s:60px;--l:70%;--d:1s;--op:0.12"></div>
+    <div class="bubble" style="--s:90px;--l:90%;--d:3s;--op:0.1"></div>
+    <div class="ripple ripple-1"></div>
+    <div class="ripple ripple-2"></div>
+  </div>
+
+  <!-- Minimal Navbar -->
+  <nav class="navbar navbar-auth">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-icon"><i class="fa-solid fa-droplet"></i></span>
+      <span class="brand-name">Aqua<span class="brand-accent">Pure</span></span>
+    </a>
+    <a href="index.html" class="btn btn-ghost btn-sm">
+      <i class="fa-solid fa-arrow-left"></i> Back to Home
+    </a>
+  </nav>
+
+  <!-- Auth Layout -->
+  <main class="auth-main">
+    <!-- Left panel: brand art -->
+    <div class="auth-left">
+      <div class="auth-left-content">
+        <img
+          src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&q=80&fit=crop"
+          alt="Water delivery"
+          class="auth-side-img"
+          onerror="this.src='https://images.unsplash.com/photo-1559839914-17aae19cec71?w=600&q=80&fit=crop'"
+        />
+        <div class="auth-quote-block">
+          <h2>"Clean Water,<br/><span class="gradient-text">Healthy Future.</span>"</h2>
+          <p>Join 50,000+ families who trust AquaPure for pure, safe drinking water every day.</p>
+          <!-- Mini stats -->
+          <div class="auth-mini-stats">
+            <div class="mini-stat">
+              <strong>50K+</strong><span>Customers</span>
+            </div>
+            <div class="mini-stat">
+              <strong>20+</strong><span>Cities</span>
+            </div>
+            <div class="mini-stat">
+              <strong>99.9%</strong><span>Purity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right panel: login form -->
+    <div class="auth-right">
+      <div class="auth-form-wrap glass-card">
+        <!-- Header -->
+        <div class="auth-form-header">
+          <div class="auth-logo">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <h1>Welcome Back</h1>
+          <p>Login to manage your water delivery</p>
+        </div>
+
+        <!-- Social Login -->
+        <div class="social-login">
+          <button class="btn-social" type="button">
+            <i class="fa-brands fa-google"></i> Continue with Google
+          </button>
+        </div>
+        <div class="auth-divider"><span>or login with email</span></div>
+
+        <!-- Login Form -->
+        <form id="loginForm" novalidate>
+          <!-- Email -->
+          <div class="form-group">
+            <label for="loginEmail">
+              <i class="fa-solid fa-envelope"></i> Email Address
+            </label>
+            <input
+              type="email"
+              id="loginEmail"
+              class="form-input"
+              placeholder="you@email.com"
+              autocomplete="email"
+            />
+            <span class="form-error" id="loginEmailErr"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="loginPass">
+              <i class="fa-solid fa-lock"></i> Password
+            </label>
+            <div class="input-icon-wrap">
+              <input
+                type="password"
+                id="loginPass"
+                class="form-input"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+              />
+              <button type="button" class="toggle-pass" data-target="loginPass" aria-label="Toggle password visibility">
+                <i class="fa-solid fa-eye" id="loginPassIcon"></i>
+              </button>
+            </div>
+            <span class="form-error" id="loginPassErr"></span>
+          </div>
+
+          <!-- Remember + Forgot -->
+          <div class="form-row-between">
+            <label class="checkbox-wrap">
+              <input type="checkbox" id="rememberMe" />
+              <span class="checkmark"></span>
+              Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-glow btn-full btn-lg" id="loginBtn">
+            <span class="btn-text"><i class="fa-solid fa-right-to-bracket"></i> Login</span>
+            <span class="btn-loader hidden"><i class="fa-solid fa-spinner fa-spin"></i> Logging in...</span>
+          </button>
+
+          <!-- Success/Error message -->
+          <div class="form-msg hidden" id="loginMsg"></div>
+        </form>
+
+        <p class="auth-switch">
+          Don't have an account? <a href="signup.html">Sign Up Free</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

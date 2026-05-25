@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up — AquaPure</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="auth-body">
+
+  <!-- Water Background -->
+  <div class="water-bg" aria-hidden="true">
+    <div class="bubble" style="--s:70px;--l:8%;--d:0s;--op:0.15"></div>
+    <div class="bubble" style="--s:45px;--l:30%;--d:2s;--op:0.1"></div>
+    <div class="bubble" style="--s:100px;--l:60%;--d:4s;--op:0.08"></div>
+    <div class="bubble" style="--s:65px;--l:85%;--d:1.5s;--op:0.12"></div>
+    <div class="ripple ripple-1"></div>
+    <div class="ripple ripple-3"></div>
+  </div>
+
+  <!-- Minimal Navbar -->
+  <nav class="navbar navbar-auth">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-icon"><i class="fa-solid fa-droplet"></i></span>
+      <span class="brand-name">Aqua<span class="brand-accent">Pure</span></span>
+    </a>
+    <a href="index.html" class="btn btn-ghost btn-sm">
+      <i class="fa-solid fa-arrow-left"></i> Back to Home
+    </a>
+  </nav>
+
+  <!-- Auth Layout -->
+  <main class="auth-main">
+    <!-- Left Panel -->
+    <div class="auth-left">
+      <div class="auth-left-content">
+        <img
+          src="https://images.unsplash.com/photo-1624958723474-089a63e22afa?w=600&q=80&fit=crop"
+          alt="Water bottles"
+          class="auth-side-img"
+          onerror="this.src='https://images.unsplash.com/photo-1559839914-17aae19cec71?w=600&q=80&fit=crop'"
+        />
+        <div class="auth-quote-block">
+          <h2>"Every Drop<br/><span class="gradient-text">Matters.</span>"</h2>
+          <p>Start your journey to pure hydration today. Sign up and get your first delivery FREE.</p>
+          <!-- Benefits list -->
+          <ul class="auth-benefits">
+            <li><i class="fa-solid fa-check-circle"></i> First delivery absolutely free</li>
+            <li><i class="fa-solid fa-check-circle"></i> Flexible delivery schedules</li>
+            <li><i class="fa-solid fa-check-circle"></i> Cancel or pause anytime</li>
+            <li><i class="fa-solid fa-check-circle"></i> 24/7 customer support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Panel: Signup Form -->
+    <div class="auth-right">
+      <div class="auth-form-wrap glass-card">
+        <!-- Header -->
+        <div class="auth-form-header">
+          <div class="auth-logo">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <h1>Create Account</h1>
+          <p>Join AquaPure — pure water awaits</p>
+        </div>
+
+        <!-- Social Signup -->
+        <div class="social-login">
+          <button class="btn-social" type="button">
+            <i class="fa-brands fa-google"></i> Sign up with Google
+          </button>
+        </div>
+        <div class="auth-divider"><span>or sign up with email</span></div>
+
+        <!-- Signup Form -->
+        <form id="signupForm" novalidate>
+          <!-- Name row -->
+          <div class="form-row-two">
+            <div class="form-group">
+              <label for="signupFirst">
+                <i class="fa-solid fa-user"></i> First Name
+              </label>
+              <input
+                type="text"
+                id="signupFirst"
+                class="form-input"
+                placeholder="Rahul"
+                autocomplete="given-name"
+              />
+              <span class="form-error" id="signupFirstErr"></span>
+            </div>
+            <div class="form-group">
+              <label for="signupLast">
+                <i class="fa-solid fa-user"></i> Last Name
+              </label>
+              <input
+                type="text"
+                id="signupLast"
+                class="form-input"
+                placeholder="Kumar"
+                autocomplete="family-name"
+              />
+              <span class="form-error" id="signupLastErr"></span>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="signupEmail">
+              <i class="fa-solid fa-envelope"></i> Email Address
+            </label>
+            <input
+              type="email"
+              id="signupEmail"
+              class="form-input"
+              placeholder="rahul@email.com"
+              autocomplete="email"
+            />
+            <span class="form-error" id="signupEmailErr"></span>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="signupPhone">
+              <i class="fa-solid fa-phone"></i> Phone Number
+            </label>
+            <input
+              type="tel"
+              id="signupPhone"
+              class="form-input"
+              placeholder="+91 98765 43210"
+              autocomplete="tel"
+            />
+            <span class="form-error" id="signupPhoneErr"></span>
+          </div>
+
+          <!-- Address -->
+          <div class="form-group">
+            <label for="signupAddress">
+              <i class="fa-solid fa-location-dot"></i> Delivery Address
+            </label>
+            <input
+              type="text"
+              id="signupAddress"
+              class="form-input"
+              placeholder="House / Street / City"
+              autocomplete="street-address"
+            />
+            <span class="form-error" id="signupAddressErr"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="signupPass">
+              <i class="fa-solid fa-lock"></i> Password
+            </label>
+            <div class="input-icon-wrap">
+              <input
+                type="password"
+                id="signupPass"
+                class="form-input"
+                placeholder="Min 8 characters"
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-pass" data-target="signupPass" aria-label="Toggle password">
+                <i class="fa-solid fa-eye" id="signupPassIcon"></i>
+              </button>
+            </div>
+            <!-- Password strength bar -->
+            <div class="pass-strength-bar" id="passStrengthBar">
+              <div class="pass-strength-fill" id="passStrengthFill"></div>
+            </div>
+            <span class="pass-strength-label" id="passStrengthLabel"></span>
+            <span class="form-error" id="signupPassErr"></span>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group">
+            <label for="signupConfirm">
+              <i class="fa-solid fa-lock"></i> Confirm Password
+            </label>
+            <div class="input-icon-wrap">
+              <input
+                type="password"
+                id="signupConfirm"
+                class="form-input"
+                placeholder="Re-enter password"
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-pass" data-target="signupConfirm" aria-label="Toggle password">
+                <i class="fa-solid fa-eye" id="signupConfirmIcon"></i>
+              </button>
+            </div>
+            <span class="form-error" id="signupConfirmErr"></span>
+          </div>
+
+          <!-- Terms -->
+          <label class="checkbox-wrap">
+            <input type="checkbox" id="agreeTerms" />
+            <span class="checkmark"></span>
+            I agree to the <a href="#" class="inline-link">Terms of Service</a> & <a href="#" class="inline-link">Privacy Policy</a>
+          </label>
+          <span class="form-error" id="signupTermsErr"></span>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-glow btn-full btn-lg" id="signupBtn" style="margin-top:1rem">
+            <span class="btn-text"><i class="fa-solid fa-user-plus"></i> Create My Account</span>
+            <span class="btn-loader hidden"><i class="fa-solid fa-spinner fa-spin"></i> Creating account...</span>
+          </button>
+
+          <!-- Success/Error Message -->
+          <div class="form-msg hidden" id="signupMsg"></div>
+        </form>
+
+        <p class="auth-switch">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
